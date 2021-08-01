@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   resources :testers
   resources :pages
-  get 'section/index'
-  get 'section/show'
-  get 'section/new'
-  get 'section/edit'
-  get 'section/delete'
+  resources :sections
   #get 'subjects/index'
   #get 'subjects/show'
   #get 'subjects/new'

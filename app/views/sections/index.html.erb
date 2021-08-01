@@ -19,7 +19,7 @@
         <td class = "action">
           <%=link_to("Show",section_path(section.id),:class=>'acton show')%>
           <%=link_to("Edit",edit_section_path(section.id),:class=>'acton edit')%>
-          <%=link_to("Delete",delete_section_path(section.id),:class=>'acton delete')%>
+          <%=link_to("Delete",section_path(section.id),:class=>'acton delete')%>
         </td>
       </tr>
     <%end%>
