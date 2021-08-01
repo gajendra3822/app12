@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'style.css' %>
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<%end%>
+<%= link_to("BACK TO LIST", subjects_path, :class => 'back-link')%>
+<div class="subject edit">
+	<h1>Edit Subject</h1>
+	<%= form_for(@subjects, :url => subject_path(@subjects), :method => 'patch')do |f| %>
+	<table summary="Subject for fields">
+		<tr>
+			<th>Name</th>
+			<td><%= f.text_field(:name) %></td>
+		</tr>
+		<tr>
+			<th>Position</th>
+			<td><%= f.text_field(:position) %></td>
+		</tr>
+		<tr>
+			<th>Visible</th>
+			<td><%= f.text_field(:visible) %></td>
+		</tr>
+	</table>
+	<div class="form-buttons">
+		<%= f.submit("Update Subject") %>
+	</div>
+	<%end%>
+</div>
